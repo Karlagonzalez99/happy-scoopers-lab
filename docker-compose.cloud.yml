@@ -48,15 +48,19 @@ services:
   # Protegido con usuario/clave (los mismos de pgAdmin por defecto).
   # ------------------------------------------------------------
   ttyd:
-    image: tsl0922/ttyd:latest
+    build:
+      context: .
+      dockerfile: ttyd/Dockerfile
     container_name: happy_scoopers_ttyd
     restart: unless-stopped
     working_dir: /opt/happy-scoopers
     volumes:
-      - ./..:/opt/happy-scoopers          # el proyecto, para trabajar en él
+      - .:/opt/happy-scoopers          # el proyecto, para trabajar en él
     environment:
       TTYD_USER: ${TTYD_USER:-alumno}
       TTYD_PASS: ${PGADMIN_PASSWORD:-admin}
+      DBT_HOST: dwh
+      DBT_PORT: "5432"
     # -W habilita escritura; -b fija el basepath tras el proxy;
     # -c usuario:clave exige autenticación; abre bash como shell.
     command: sh -c 'ttyd -W -b /terminal -c "$$TTYD_USER:$$TTYD_PASS" bash'
