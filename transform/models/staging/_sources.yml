@@ -1,0 +1,10 @@
+version: 2
+sources:
+  - name: raw
+    schema: raw
+    tables:
+      - name: products
+      - name: product_departments
+      - name: product_categories
+      - name: product_subcategories
+      - name: units_of_measure
