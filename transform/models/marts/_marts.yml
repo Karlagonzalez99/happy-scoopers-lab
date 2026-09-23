@@ -1,0 +1,15 @@
+
+  - name: dim_product
+    columns:
+      - name: product_key
+        data_tests:
+          - unique
+          - not_null
+      - name: product_id
+        data_tests:
+          - not_null
+      - name: is_discontinued
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['Sí', 'No', 'N/A']
