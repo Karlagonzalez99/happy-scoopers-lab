@@ -1,11 +1,11 @@
 {{ config(materialized='table') }}
 
-with e   as ( select * from {{ ref('stg_oltp_employees') }} ),
-     mgr as ( select employee_id, first_name, last_name from {{ ref('stg_oltp_employees') }} ),
-     adr as ( select * from {{ ref('stg_oltp_addresses') }} ),
-     cit as ( select * from {{ ref('stg_oltp_cities') }} ),
-     prv as ( select * from {{ ref('stg_oltp_provinces') }} ),
-     cou as ( select * from {{ ref('stg_oltp_countries') }} ),
+with e   as ( select * from {{ ref('stg_oltp__employees') }} ),
+     mgr as ( select employee_id, first_name, last_name from {{ ref('stg_oltp__employees') }} ),
+     adr as ( select * from {{ ref('stg_oltp__addresses') }} ),
+     cit as ( select * from {{ ref('stg_oltp__cities') }} ),
+     prv as ( select * from {{ ref('stg_oltp__provinces') }} ),
+     cou as ( select * from {{ ref('stg_oltp__countries') }} ),
 
 joined as (
     select
