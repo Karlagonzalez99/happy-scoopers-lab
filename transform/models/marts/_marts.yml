@@ -15,8 +15,8 @@ models:
           - accepted_values:
               arguments:
                 values: ['Sí', 'No', 'N/A']
-
-                - name: dim_employee
+                
+      - name: dim_employee
     columns:
       - name: employee_key
         data_tests: [unique, not_null]
