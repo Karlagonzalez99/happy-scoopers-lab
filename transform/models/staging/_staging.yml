@@ -1,0 +1,7 @@
+version: 2
+
+models:
+  - name: stg_oltp_addresses
+  - name: stg_oltp_cities
+  - name: stg_oltp_provinces
+  - name: stg_oltp_countries
