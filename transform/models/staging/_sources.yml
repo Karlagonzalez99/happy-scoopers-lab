@@ -3,6 +3,7 @@ sources:
   - name: raw
     schema: raw
     tables:
+      - name: customers
       - name: products
       - name: product_departments
       - name: product_categories
