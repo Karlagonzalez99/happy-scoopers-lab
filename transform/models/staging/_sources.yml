@@ -3,6 +3,7 @@ sources:
   - name: raw
     schema: raw
     tables:
+      - name: payment_types
       - name: customers
       - name: products
       - name: product_departments
