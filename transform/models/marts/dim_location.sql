@@ -46,7 +46,7 @@ aplanamiento AS (
 miembro_desconocido AS (
     -- Fila manual para datos huérfanos o nulos
     SELECT 
-        -1'::text AS location_key,
+        '-1'::text AS location_key,
         -1 AS address_id,
         'Desconocido' AS address_line1,
         NULL AS address_line2,
