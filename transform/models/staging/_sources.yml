@@ -4,6 +4,7 @@ sources:
     schema: raw
     tables:
       - name: payment_types
+      - name: promotions
       - name: customers
       - name: products
       - name: product_departments
